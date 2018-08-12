@@ -22,4 +22,8 @@ module.exports = {
     swallowErrors: true,
     pretty: true,
   },
+  sass: {
+    outputStyle: 'expanded',
+    precision: 4,
+  }
 };

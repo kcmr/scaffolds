@@ -10,7 +10,7 @@ class YourComponent extends PolymerElement {
   static get template() {
     return html`
       <link rel="stylesheet" href="your-component.css" include="optional-shared-style" inline>
-      <p>Hello World!</p>
+      <p class="class__nested">Hello World!</p>
     `;
   }
 

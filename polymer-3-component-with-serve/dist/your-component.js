@@ -18,8 +18,13 @@ class YourComponent extends PolymerElement {
       [hidden] {
         display: none;
       }
+
+      .class__nested {
+        color: blueviolet;
+      }
+
       </style>
-      <p>Hello World!</p>
+      <p class="class__nested">Hello World!</p>
     `;
   }
 

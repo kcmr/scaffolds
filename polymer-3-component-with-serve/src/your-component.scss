@@ -6,3 +6,9 @@
 [hidden] {
   display: none;
 }
+
+.class {
+  &__nested {
+    color: blueviolet;
+  }
+}

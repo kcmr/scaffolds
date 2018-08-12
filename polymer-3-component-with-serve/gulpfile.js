@@ -7,6 +7,7 @@ const browserSync = require('browser-sync').create();
 const portfinder = require('portfinder');
 const {spawn} = require('child_process');
 const inlineSource = require('gulp-inline-source');
+const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const pxtorem = require('postcss-pixels-to-rem');
@@ -59,7 +60,8 @@ const getServerConfig = (port) => {
 };
 
 gulp.task('styles', () => {
-  return gulp.src(['src/*.css'])
+  return gulp.src(['src/*.scss'])
+    .pipe(sass(config.sass).on('error', sass.logError))
     .pipe(postcss([
       pxtorem(config.pxtorem),
       autoprefixer(config.autoprefixer),
@@ -87,7 +89,7 @@ gulp.task('start-server', () => {
 });
 
 gulp.task('watch:sources', () => {
-  gulp.watch(['src/*.{js, css}'], ['styles', 'eslint', 'build:dist']);
+  gulp.watch(['src/*.{js,scss}'], ['build:dist']);
 });
 
 gulp.task('watch:dist', () => {
