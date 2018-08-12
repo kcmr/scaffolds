@@ -28,7 +28,7 @@ module.exports = {
         'json',
       ],
       include: [
-        '**/your-component.js',
+        '**/*.js',
       ],
       exclude: [],
       thresholds: {
