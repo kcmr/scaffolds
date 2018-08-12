@@ -25,5 +25,5 @@ module.exports = {
   sass: {
     outputStyle: 'expanded',
     precision: 4,
-  }
+  },
 };
