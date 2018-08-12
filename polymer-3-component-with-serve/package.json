@@ -2,7 +2,7 @@
   "name": "@your-scope/your-component",
   "version": "1.0.0",
   "description": "",
-  "main": "your-component.js",
+  "main": "dist/your-component.js",
   "keywords": [],
   "dependencies": {
     "@polymer/polymer": "^3.0.5"

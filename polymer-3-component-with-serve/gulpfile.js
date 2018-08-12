@@ -17,17 +17,20 @@ const manifest = require('./package.json');
 const COMPONENT_PATH = manifest.name;
 const COMPONENT_NAME = manifest.main;
 
-const DIST_DIRECTORY = '.';
+const DIST_DIRECTORY = 'dist/';
 const TMP_DIRECTORY = '.tmp/';
+
+config.watch = config.watch || {};
 
 const WATCHED_DIST_FILES = [
   COMPONENT_NAME,
   'index.html',
   'demo/**/*',
   'test/**/*',
+  'dist/*',
 ].concat(config.watch.dist || []);
 
-gulp.task('clean', () => del.sync([TMP_DIRECTORY]));
+gulp.task('clean', () => del.sync([TMP_DIRECTORY, DIST_DIRECTORY]));
 
 const startServer = (port) => {
   const polymerCliParams = ['serve', '--npm', '-p', port];

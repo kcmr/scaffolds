@@ -7,9 +7,6 @@ module.exports = {
     reloadOnRestart: true,
     proxy: 'localhost:{{port}}/components/{{component}}/',
   },
-  watch: {
-    dist: [],
-  },
   pixtorem: {
     exclude: [
       'border',
