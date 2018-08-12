@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "test": "wct --module-resolution=node --npm",
+    "test": "gulp build:dist && wct --module-resolution=node --npm",
     "lint:javascript": "eslint . --ext js --fix"
   }
 }
